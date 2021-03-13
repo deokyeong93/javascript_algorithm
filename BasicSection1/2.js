@@ -53,3 +53,9 @@ function solutionUp(a, b, c) {
 }
 
 console.log(solutionUp(13, 22, 17));
+
+// 학습 사항 추가!
+// Math.min(...arr), Math.max(...arr) 내장 함수를 사용하면
+// 전개 연산자 사용하기싫으면 Math.min.apply(null, arr)이런식으로 사용하는데 그냥 전개연산자 사용하자.
+// Math.min(1,2,3,4) // 1 이런식이다.
+// 아주 쉽게 최소 최대값을 구할 수 있다..
