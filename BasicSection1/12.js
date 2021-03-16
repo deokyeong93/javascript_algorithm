@@ -12,6 +12,9 @@ function solution(s) {
   return answer;
 }
 
+// 사실 한번에 바뀌지만 그렇게 안 풀고 굳이 한개한개를 뽑아서 하는이유는
+// 문제해결 방식 연습을 위한것이다.
+
 let str = "ItisTimeToStudy";
 console.log(solution(str));
 
