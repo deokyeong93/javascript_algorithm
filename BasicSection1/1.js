@@ -51,3 +51,22 @@ console.log("두번째 나의 솔루션 답안 =>", solution(2, 5, 1));
 // 나의 답을 3개의 인자가 아닌 여러개의 인자가 들어와도 출력이 가능하게만 바꾸면
 // 이건 나의 답이 나아보인다. 같은 로직이지만 함수를 사용하는 편이 코드 작성량을 줄일 수 있을거라고 생각한다.
 // 수를 다루기 위해서 함수를 사용하는 것이 낫고, JS에 대한 이해도가 높으면 더 좋은 문법 구사가 가능하다는게 실감난다.
+
+// 복습
+
+const exArr = [6, 5, 11];
+
+function findMinimunNum(arr) {
+  let num = Number.MAX_SAFE_INTEGER;
+  // 비교하는 문제시 초기값은 작은 것을 찾는다면 최고로 큰 값을 초기값으로 주고
+  // 최대의 값을 찾는다면 초기값을 최소 값으로 주면 편하다.
+  for (let i of arr) {
+    if (i < num) {
+      num = i;
+    }
+  }
+
+  return num;
+}
+
+findMinimunNum(exArr);
