@@ -59,3 +59,25 @@ console.log(solutionUp(13, 22, 17));
 // 전개 연산자 사용하기싫으면 Math.min.apply(null, arr)이런식으로 사용하는데 그냥 전개연산자 사용하자.
 // Math.min(1,2,3,4) // 1 이런식이다.
 // 아주 쉽게 최소 최대값을 구할 수 있다..
+
+// 복습
+// 최대값 구하기 문제랑 똑같음
+
+const exArr = [6, 7, 11];
+
+function isCanMakeTriangle(arr) {
+  const findMaxNum = (_arr) => {
+    let num = Number.MIN_SAFE_INTEGER;
+    for (let arrNum of _arr) {
+      if (arrNum > num) num = arrNum;
+    }
+    return num;
+  };
+
+  const addRemainTwoNumber = (_arr, _maxNum) => {
+    return _arr.reduce((a, b) => a + b) - _maxNum;
+  };
+
+  if (findMaxNum(arr) < addRemainTwoNumber(arr, findMaxNum(arr))) return "YES";
+  return "NO";
+}
