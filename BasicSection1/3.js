@@ -15,3 +15,13 @@ function solution(n) {
 }
 
 console.log(solution(210));
+
+// 복습
+// 나머지가 있을 경우 몫에 1을 더해준다.
+
+function specialCountAddOne(_num, _constantNum) {
+  let constantNum = _constantNum;
+
+  if (_num % _constantNum) return Math.ceil(_num / _constantNum);
+  if (!_num % _constantNum) return _num / _constantNum;
+}
