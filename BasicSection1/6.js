@@ -22,3 +22,22 @@ function min(a, b) {
 
 arr = [12, 77, 38, 41, 53, 92, 85];
 console.log(solution(arr));
+
+// 복습!
+// 배열을 만들면 쉽지만 새로운 메모리를 할당하지 않고 진행해보기!
+
+function oddSum(_arr) {
+  let acc = 0;
+  let minimunOdd = Number.MAX_SAFE_INTEGER;
+
+  for (let num of _arr) {
+    if (num % 2) {
+      acc = acc + num;
+      if (num < minimunOdd) {
+        minimunOdd = num;
+      }
+    }
+  }
+
+  return `${acc}\n${minimunOdd}`;
+}
