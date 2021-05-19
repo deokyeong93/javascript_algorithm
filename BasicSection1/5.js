@@ -45,3 +45,18 @@ let arr = [5, 7, 1, 3, 2, 9, 11];
 
 console.log(solution(...arr));
 console.log(solutionOther(...arr));
+
+//복습
+//최솟값 구하는 문제
+
+function minimumNum(_arr) {
+  let num = Number.MAX_SAFE_INTEGER;
+
+  if (_arr.length < 1) throw new Error("길이가 1 이상의 배열을 집어넣으시오");
+
+  for (let i of _arr) {
+    if (i < num) num = i;
+  }
+
+  return num;
+}
