@@ -28,3 +28,14 @@ console.log(solutionUp(15));
 
 // n이 1과 2일 경우 좀 더 추상화 과정을 거쳐서 코드를 줄일 수 있을 것 같은데,
 // 일단 알고리즘의 기초를 빠르게 공부중이라 다시 돌아와서 복습할 때 재구현해보자!!!
+
+// 복습
+
+function sumToNum(_num) {
+  let acc = 0;
+
+  for (let i = 1; i <= _num; i++) {
+    acc = acc + i;
+  }
+  return acc;
+}
