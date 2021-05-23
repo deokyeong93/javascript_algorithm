@@ -22,3 +22,17 @@ console.log(solution(3, arr));
 
 arr = [12, 20, 54, 30, 87, 91, 30];
 console.log("추가 확인 =>", solution(27, arr));
+
+// 복습
+let exNum = 3;
+let exArr = [25, 23, 11, 47, 53, 17, 33];
+
+function findCar(date, cars) {
+  let count = 0;
+
+  for (let car of cars) {
+    if (date === car % 10) count++;
+  }
+
+  return count;
+}
