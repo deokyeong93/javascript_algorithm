@@ -70,3 +70,33 @@ function solutionUp(arr) {
 
 let arr2 = [20, 7, 23, 19, 10, 15, 25, 8, 13];
 console.log("up => ", solutionUp(arr2));
+
+//복습
+let arr2 = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+function findChildren(children) {
+  const totalTall = children.reduce((a, b) => a + b, 0);
+  const remainTall = totalTall - 100;
+  let firstNum;
+  let secondNum;
+  let arr = [];
+
+  for (let i = 0; i < children.length; i++) {
+    if (i === children.length - 1) return "i can't find";
+    firstNum = children[i];
+    for (let j = i + 1; j < children.length; j++) {
+      secondNum = children[j];
+      if (remainTall === firstNum + secondNum) {
+        break;
+      }
+    }
+    if (remainTall === firstNum + secondNum) break;
+  }
+
+  for (let a of children) {
+    if (a !== firstNum && a !== secondNum) {
+      arr.push(a);
+    }
+  }
+
+  return arr.join(" ");
+}
